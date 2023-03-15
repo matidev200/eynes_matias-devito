@@ -16,3 +16,15 @@ class Circulo:
     def __init__(self, radio):
         # Inicializamos la clase con una variable rádio protegida (la usaremos dentro de nuestro clase Círculo.)
         self._radio = radio
+
+    # Definimos nuestros métodos getter and setter.
+    @property
+    def radio(self):
+        return self._radio
+    
+    @radio.setter
+    def radio(self, radio):
+        if radio <= 0:
+            raise ValueError("No puedes ingresar un radio menor o igual a cero.")
+        
+        self._radio = radio
