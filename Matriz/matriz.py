@@ -52,3 +52,23 @@ def buscar_indices(array):
     # Finalmente si la posición final es diferente de 0, significa que obtuvimos una secuencia.
     if posicion["ultima_posición"] != 0:
         return posicion
+    
+def buscar_secuencia(arrays):
+
+    """
+    Input:
+    Diccionario con el siguiente formato : {"array_horizontal" : numpy.array, "array_vertical" : numpy.array}
+
+    Output:
+    String representando las dos matrices y los resultados encontrados en la matriz horizontal.
+    """
+
+    # Llamamos a nuestra función para que se ejecute en cada lista de nuestra matriz.
+
+    print(f'Array Horizontal: \n{arrays["array_horizontal"]} \n Array Vertical: \n{arrays["array_vertical"]}')
+
+    for columna_horizontal in arrays["array_horizontal"]:
+        horizontal = buscar_indices(array= columna_horizontal)
+        if horizontal:
+            print(f'Una secuencia de cuatro numeros fue encontrada en el array horizontal \n{horizontal}')
+            break
