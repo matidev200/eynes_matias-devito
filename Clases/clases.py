@@ -28,3 +28,15 @@ class Circulo:
             raise ValueError("No puedes ingresar un radio menor o igual a cero.")
         
         self._radio = radio
+
+    # Definimos nuestras funciones de la clase Círculo respetando las condiciones requeridas en la prueba.
+    def area(self):
+        return math.pi * self._radio ** 2
+
+    def perimetro(self):
+        return 2 * math.pi * self._radio
+    
+    def multiplicar_radio(self, factor):
+        if factor <= 0:
+            raise ValueError("No puedes multiplicar el radio por numeros menores o iguales a 0")      
+        return Circulo(self._radio * factor)
