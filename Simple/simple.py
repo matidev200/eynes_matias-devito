@@ -14,4 +14,10 @@ def generador_diccionarios():
     return diccionarios
 
 def ordenador_diccionarios(diccionarios):
-    pass
+    # Ordenamos la lista con la función sorted aplicando lambda para tratar con cada key edad del diccionario.
+    lista_ordenada = sorted(diccionarios, key=lambda item: item['edad'], reverse=True)
+
+    # Hacemos uso del print para mostrar la edad más alta y la más baja.
+    print(f'Persona más vieja: {lista_ordenada[0]["id"]}, Persona más joven: {lista_ordenada[-1]["id"]}')
+
+    return lista_ordenada
