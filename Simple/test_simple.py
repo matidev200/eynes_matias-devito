@@ -22,3 +22,7 @@ class TestDiccionarios(unittest.TestCase):
             self.assertTrue("edad" in self.generador[i], "La lista debe contener diccionarios con edad")
 
             self.assertTrue(self.generador[i]["edad"] in range(1,100), "Las edades deben estar entre 1 y 100")
+
+    def test_ordenador(self):
+
+        self.assertNotEqual(self.generador, self.ordenador, "Las listas deben haber pasado por el ordenamiento de la función ordenador")
