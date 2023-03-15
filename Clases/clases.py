@@ -40,3 +40,11 @@ class Circulo:
         if factor <= 0:
             raise ValueError("No puedes multiplicar el radio por numeros menores o iguales a 0")      
         return Circulo(self._radio * factor)
+    
+    # Definimos nuestros métodos representativos.
+    def __str__(self):
+        return f"Este es tu objecto Circulo creado: Radio {self._radio}, Area: {self.area()}, Perimetro: {self.perimetro()} "
+
+    def __repr__(self):
+        return f"Circulo(radio={self._radio})"
+        

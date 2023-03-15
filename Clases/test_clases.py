@@ -19,3 +19,9 @@ class TestCirculo(unittest.TestCase):
         self.assertTrue(hasattr(self.circulo, "area"), "La clase debe contener un  método área")
 
         self.assertTrue(hasattr(self.circulo, "multiplicar_radio"), "La clase debe tener un método de multiplicación para el radio")
+
+        self.assertTrue(hasattr(self.circulo, "__str__"), "La clase debe tener un método __str__")
+
+        self.assertTrue(self.circulo.radio, "El radio debe ser mayor a 0")
+
+        self.assertTrue(self.circulo.multiplicar_radio(factor=2), "El radio debe multiplicarse por un número mayor a 0")
